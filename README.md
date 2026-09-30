@@ -1,4 +1,4 @@
-![CI](https://github.com/saisusmithamullapudi-svg/experience-cloud-project-portal/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/saisusmithamullapudi-svg/experience-cloud-project-portal/actions/workflows/main.yml/badge.svg)
 # Experience Cloud Project Portal
 
 Lightning Web Components and a secure Apex controller for an Experience Cloud self-service portal: homeowners and partners see the status of their installation projects and raise support requests without calling a service center.
