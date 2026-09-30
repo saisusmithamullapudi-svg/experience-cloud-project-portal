@@ -8,7 +8,7 @@
     "test:unit": "sfdx-lwc-jest",
     "test:unit:coverage": "sfdx-lwc-jest --coverage",
     "lint:format": "prettier --check \"force-app/**/*.{cls,trigger,js,html,json}\"",
-    "format": "prettier --write \"force-app/**/*.{cls,trigger,js,html,json,xml}\"",
+    "format": "prettier --write \"force-app/**/*.{cls,trigger,js,html,json}\"",
     "test:apex": "sf apex run test --test-level RunLocalTests --code-coverage --result-format human --wait 20"
   },
   "devDependencies": {
