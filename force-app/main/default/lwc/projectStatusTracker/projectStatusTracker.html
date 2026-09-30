@@ -1,0 +1,54 @@
+<template>
+    <lightning-card title="My projects" icon-name="custom:custom24">
+        <div class="slds-p-horizontal_medium">
+            <template lwc:if={isLoading}>
+                <lightning-spinner alternative-text="Loading projects" size="small"></lightning-spinner>
+            </template>
+
+            <template lwc:if={errorMessage}>
+                <div class="slds-notify slds-notify_alert slds-alert_error error" role="alert">{errorMessage}</div>
+            </template>
+
+            <template lwc:if={isEmpty}>
+                <p class="empty-state slds-text-color_weak">You have no active projects yet.</p>
+            </template>
+
+            <template lwc:if={hasProjects}>
+                <template for:each={projects} for:item="project">
+                    <article key={project.id} class="project slds-box slds-m-bottom_small">
+                        <h3 class="slds-text-heading_small project-name">{project.name}</h3>
+                        <lightning-progress-indicator
+                            current-step={project.stage}
+                            type="path"
+                            variant="base"
+                            class="slds-m-vertical_small"
+                        >
+                            <template for:each={project.steps} for:item="step">
+                                <lightning-progress-step
+                                    key={step.value}
+                                    label={step.label}
+                                    value={step.value}
+                                ></lightning-progress-step>
+                            </template>
+                        </lightning-progress-indicator>
+                        <dl class="slds-list_horizontal slds-wrap">
+                            <dt class="slds-item_label slds-text-color_weak">Progress</dt>
+                            <dd class="slds-item_detail progress">{project.progressLabel}</dd>
+                            <dt class="slds-item_label slds-text-color_weak">Target install</dt>
+                            <dd class="slds-item_detail">
+                                <lightning-formatted-date-time
+                                    value={project.targetInstallDate}
+                                ></lightning-formatted-date-time>
+                            </dd>
+                            <dt class="slds-item_label slds-text-color_weak">System size</dt>
+                            <dd class="slds-item_detail">{project.systemSizeKw} kW</dd>
+                        </dl>
+                        <template lwc:if={project.hasOpenCases}>
+                            <lightning-badge label={project.openCasesLabel} class="open-cases"></lightning-badge>
+                        </template>
+                    </article>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

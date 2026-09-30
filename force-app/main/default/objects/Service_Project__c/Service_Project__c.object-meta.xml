@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Service Project</label>
+    <pluralLabel>Service Projects</pluralLabel>
+    <nameField>
+        <label>Project Name</label>
+        <type>Text</type>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>Private</sharingModel>
+    <externalSharingModel>Private</externalSharingModel>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableHistory>true</enableHistory>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableBulkApi>true</enableBulkApi>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <description>Synthetic installation project shown to homeowners and partners in the portal.</description>
+</CustomObject>

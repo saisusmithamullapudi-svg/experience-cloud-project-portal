@@ -1,0 +1,44 @@
+<template>
+    <lightning-card title="Request support" icon-name="standard:case">
+        <div class="slds-p-horizontal_medium">
+            <lightning-combobox
+                name="project"
+                label="Project"
+                placeholder="Choose a project"
+                options={projectOptions}
+                value={projectId}
+                onchange={handleProjectChange}
+                required
+            ></lightning-combobox>
+            <lightning-input
+                name="subject"
+                label="Subject"
+                value={subject}
+                max-length={subjectMax}
+                onchange={handleSubjectChange}
+                required
+            ></lightning-input>
+            <lightning-textarea
+                name="description"
+                label="Describe the issue"
+                value={description}
+                max-length="4000"
+                onchange={handleDescriptionChange}
+            ></lightning-textarea>
+            <div class="slds-m-top_small">
+                <lightning-button
+                    variant="brand"
+                    label="Submit request"
+                    onclick={handleSubmit}
+                    disabled={isSubmitDisabled}
+                    class="submit"
+                ></lightning-button>
+            </div>
+            <template lwc:if={lastCaseNumber}>
+                <p class="confirmation slds-m-top_small slds-text-color_success">
+                    Request {lastCaseNumber} submitted. We will reply by email.
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

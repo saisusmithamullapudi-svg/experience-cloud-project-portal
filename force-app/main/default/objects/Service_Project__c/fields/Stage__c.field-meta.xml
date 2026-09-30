@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <label>Stage</label>
+    <type>Picklist</type>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value><fullName>Contract Signed</fullName><default>true</default><label>Contract Signed</label></value>
+            <value><fullName>Site Survey</fullName><default>false</default><label>Site Survey</label></value>
+            <value><fullName>Permitting</fullName><default>false</default><label>Permitting</label></value>
+            <value><fullName>Installation</fullName><default>false</default><label>Installation</label></value>
+            <value><fullName>Inspection</fullName><default>false</default><label>Inspection</label></value>
+            <value><fullName>Activated</fullName><default>false</default><label>Activated</label></value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
