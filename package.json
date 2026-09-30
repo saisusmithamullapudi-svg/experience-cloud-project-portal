@@ -1,0 +1,20 @@
+{
+  "name": "experience-cloud-project-portal",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Experience Cloud self-service portal components (LWC + Apex) that show homeowners and partners their project status and let them raise support requests.",
+  "license": "MIT",
+  "scripts": {
+    "test:unit": "sfdx-lwc-jest",
+    "test:unit:coverage": "sfdx-lwc-jest --coverage",
+    "lint:format": "prettier --check \"force-app/**/*.{cls,trigger,js,html,json,xml}\"",
+    "format": "prettier --write \"force-app/**/*.{cls,trigger,js,html,json,xml}\"",
+    "test:apex": "sf apex run test --test-level RunLocalTests --code-coverage --result-format human --wait 20"
+  },
+  "devDependencies": {
+    "@salesforce/sfdx-lwc-jest": "^7.0.0",
+    "prettier": "^3.3.0",
+    "prettier-plugin-apex": "^2.1.0",
+    "@sa11y/jest": "^8.1.1"
+  }
+}
